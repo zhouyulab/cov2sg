@@ -1,0 +1,7 @@
+# Add your requirements here like:
+bx-python>=0.8.0
+biopython>=1.74
+pysam>=0.15.4
+plastid==0.4.8
+pytest
+cython>=0.29

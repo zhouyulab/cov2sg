@@ -1,0 +1,16 @@
+chr1	10	25	chr1	110	125	f6|AAAA	255	+	-
+chr1	110	125	chr1	10	25	r6|AAAA	255	-	+
+chr1	10	30	chr1	110	130	f1|AAAA	255	+	-
+chr1	10	30	chr1	110	130	f2|AAAA	255	+	-
+chr1	10	30	chr1	110	130	f3|AAAA	255	+	-
+chr1	10	30	chr1	110	130	f4|CCCC	255	+	-
+chr1	10	30	chr1	110	130	f5|GGGG	255	+	-
+chr1	110	130	chr1	10	30	r1|AAAA	255	-	+
+chr1	110	130	chr1	10	30	r2|AAAA	255	-	+
+chr1	110	130	chr1	10	30	r3|AAAA	255	-	+
+chr1	110	130	chr1	10	30	r4|CCCC	255	-	+
+chr1	110	130	chr1	10	30	r5|GGGG	255	-	+
+chr1	10	35	chr1	110	135	f7|AAAA	255	+	-
+chr1	110	135	chr1	10	35	r7|AAAA	255	-	+
+chr2	5	20	chr2	105	120	2f|AAAA	255	+	-
+chr2	105	120	chr2	5	20	2r|AAAA	255	-	+
