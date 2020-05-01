@@ -6,17 +6,13 @@ from rnatk.ncov.subgenome import Jnc, JncAssembler, JncGroup, JncSite, SegRead
 
 @pytest.fixture()
 def bam():
+    SegRead.LIBTYPE = None
     return pysam.AlignmentFile("tests/data/trsread.bam", "rb")
 
 
 @pytest.fixture(scope="module")
-def rli():
-    bam = pysam.AlignmentFile("tests/data/trsread.bam", "rb")
-    return list(bam.fetch())
-
-
-@pytest.fixture(scope="module")
 def rex():
+    SegRead.LIBTYPE = None
     bam = pysam.AlignmentFile("tests/data/trsread.bam", "rb")
     return [r for r in bam.fetch() if r.qname == "1"][0]
 
