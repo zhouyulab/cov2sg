@@ -28,17 +28,17 @@ class SegRead:
     def infer_strand(self, r):
         if SegRead.LIBTYPE is None:
             return '-' if self.r.is_reverse else '+'
-        elif SegRead.LIBTYPE == "1++,1–,2+-,2-+":
+        elif SegRead.LIBTYPE == "1++,1--,2+-,2-+":
             if r.is_read1:
                 return '-' if self.r.is_reverse else '+'
             else:
                 return '+' if self.r.is_reverse else '-'
-        elif SegRead.LIBTYPE == "1+-,1-+,2++,2–":
+        elif SegRead.LIBTYPE == "1+-,1-+,2++,2–-":
             if r.is_read1:
                 return '+' if self.r.is_reverse else '-'
             else:
                 return '-' if self.r.is_reverse else '+'
-        elif SegRead.LIBTYPE == "++,–":
+        elif SegRead.LIBTYPE == "++,--":
             return '-' if self.r.is_reverse else '+'
         elif SegRead.LIBTYPE == "+-,-+":
             return '+' if self.r.is_reverse else '-'
@@ -498,7 +498,7 @@ def parse_args(args):
         type=str,
         dest="rule",
         help="Library rule to infer read strand",
-        default="1+-,1-+,2++,2–")
+        default="1+-,1-+,2++,2-–")
     parser.add_argument(
         "-o",
         "--outprefix",
